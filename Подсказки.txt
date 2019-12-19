@@ -1,0 +1,2 @@
+<имя GameObject>.SetActive - сделать предмет активным
+GameManager.Instance.Paused
