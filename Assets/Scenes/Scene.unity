@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411067544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b70f2d112d46c0b4686426f2faadb92d, type: 3}
   m_Name: 
@@ -1557,6 +1557,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.87, z: 0.1}
+--- !u!114 &411067551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411067544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb3ab9f155de9c468dc2385c11cf7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423880789
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,11 +7129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7167d993a68c2e4fb85e8f8d3178a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStandard: {fileID: 917706388}
-  isAlt: {fileID: 1496932668}
-  isButton: {fileID: 850282603}
 --- !u!1 &1977196157
 GameObject:
   m_ObjectHideFlags: 0

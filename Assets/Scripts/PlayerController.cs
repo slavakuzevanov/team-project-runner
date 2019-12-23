@@ -25,12 +25,21 @@ public class PlayerController : MonoBehaviour {
 		if (!GameManager.Instance.Paused) {
 			if (controller.isGrounded) {
 				verticalVelocity = -gravity * Time.deltaTime;
-				if (Input.GetKeyDown (KeyCode.Space)) {
+				if (Input.GetKeyDown (KeyCode.UpArrow)) {
 					anim.SetTrigger ("isJumping");
 					verticalVelocity = JumpForce;
 				}
 			} else {
 				verticalVelocity -= gravity * Time.deltaTime;
+			}
+
+			if (controller.isGrounded == false)
+			{
+				verticalVelocity = -gravity * Time.deltaTime;
+				if (Input.GetKeyDown(KeyCode.DownArrow))
+				{
+					verticalVelocity = -gravity * 100;
+				}
 			}
 			Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
 			controller.Move (moveVector * Time.deltaTime);

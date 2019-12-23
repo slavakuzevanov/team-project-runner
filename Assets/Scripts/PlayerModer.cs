@@ -27,14 +27,14 @@ public class PlayerModer : MonoBehaviour {
 			}
 		}
 		anim = GetComponent<Animator> ();	
-        controller = GetComponent<CharacterController>();
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
         startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
 	{
-		if (!GameManager.Instance.Paused)
+		if (GameManager.Instance.Paused == false)
 		{
 			if (isDead) {
 				return;
@@ -70,17 +70,6 @@ public class PlayerModer : MonoBehaviour {
 					else
 						if (Input.mousePosition.x <  Screen.width / 3)
 						moveVector.x = -speed;
-//						else
-//							if ((Input.mousePosition.x >  Screen.width / 3) && (Input.mousePosition.x < 2 * Screen.width / 3))
-//								if (controller.isGrounded) {
-//									verticalVelocity = -0.5f;
-//									if (Input.mousePosition.y > Screen.height / 2) {
-//										anim.SetTrigger ("isJumping");
-//										verticalVelocity = JumpForce;
-//									}
-//								} else {
-//									verticalVelocity -= gravity * Time.deltaTime;
-//								}
 							}
 			}
 
@@ -123,15 +112,6 @@ public class PlayerModer : MonoBehaviour {
 			moveVector.y = verticalVelocity;
 			moveVector.z = speed;
 			controller.Move (moveVector * Time.deltaTime);
-//		if (Global.control == 3)
-//		{
-//			for (int i = 0; i < 3; i++)
-//			{
-//				Buttons1 [i].SetActive (true);
-//			}
-//			Buttons [0].onClick.AddListener (Left);
-//			Buttons [1].onClick.AddListener (Right);
-//			Buttons [2].onClick.AddListener (Jump);
 		}
 		}
 	
@@ -202,5 +182,4 @@ public class PlayerModer : MonoBehaviour {
 		}
 
 	}
-
 }

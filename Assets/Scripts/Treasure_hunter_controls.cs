@@ -6,7 +6,7 @@ public class Treasure_hunter_controls : MonoBehaviour {
 
 	private CharacterController controller;
 
-	private Vector3 moveVector;
+	private Vector3 moveVector = new Vector3();
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float JumpForce = 10.0f;
@@ -29,10 +29,11 @@ public class Treasure_hunter_controls : MonoBehaviour {
 					anim.SetTrigger ("isJumping");
 					verticalVelocity = JumpForce;
 				}
-			} else {
+			} else 
+			{
 				verticalVelocity -= gravity * Time.deltaTime;
 			}
-			Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
+			moveVector = new Vector3(0, verticalVelocity, 0);
 			controller.Move (moveVector * Time.deltaTime);
 
 		}

@@ -2526,7 +2526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Not Gorilla Running
+  m_Text: Treasure hunt
 --- !u!222 &1894546799
 CanvasRenderer:
   m_ObjectHideFlags: 0
